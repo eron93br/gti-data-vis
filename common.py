@@ -23,3 +23,9 @@ def load_tips_dataset() -> pd.DataFrame:
 
 def make_visualization1(df):
     return px.histogram(df, x="tip")
+
+def make_visualization2(df, sel):
+    if(sel == "Boxplot em pé"):
+        return px.box(df, y="tip")
+    else:
+        return px.box(df, x="tip")
